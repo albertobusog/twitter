@@ -58,7 +58,7 @@ RSpec.describe "Users", type: :request do
       it { expect(subject.parsed_body).to include({ "error" => 'User not found' }) }
     end
 
-    context 'the user exists' do
+    context 'the user exists' do 
       let(:user_id) { user.id }
       it do
         expect(subject.parsed_body).to include({
